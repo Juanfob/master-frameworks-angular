@@ -1,3 +1,4 @@
+import { ErrorComponent } from './components/error/error.component';
 // Importar todos los módulos del router de Angular
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   {path: 'formulario', component: FormularioComponent},
   {path: 'peliculas', component: PeliculasComponent},
   {path: 'pagina', component: PaginaComponent},
+  {path: '**', component: ErrorComponent}
 ]
 
 // Exportar el módulo de rutas
