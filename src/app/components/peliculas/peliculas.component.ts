@@ -1,4 +1,5 @@
 import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Pelicula } from '../../models/pelicula';
 
 @Component({
   selector: 'app-peliculas',
@@ -7,15 +8,15 @@ import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 })
 export class PeliculasComponent implements OnInit, DoCheck, OnDestroy {
   public titulo;
-  public peliculas: Array<any>;
+  public peliculas: Array<Pelicula>;
 
   constructor() {
     this.titulo = 'componente peliculas';
     this.peliculas = [
-      {year: 2019, title: "Spiderman 4", image: "https://cnet1.cbsistatic.com/img/rfzZ-7G32v_qEt2uCD0b4KB2rho=/940x0/2019/03/26/13d0a566-7355-4381-be24-dee281227504/spider-man-far-from-home-promo-image-1.jpg"},
-      {year: 2018, title: "Vengadores Endgame", image: "https://as.com/tikitakas/imagenes/2019/04/26/portada/1556258369_131914_1556258703_noticia_normal.jpg"},
-      {year: 2015, title: "Batman vs Superman", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujMN0ViTbR_tUzQBB1L1sA_vVW_K-FTicDw&usqp=CAU"},
-      {year: 2019, title: "Batman vs Superman 2", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujMN0ViTbR_tUzQBB1L1sA_vVW_K-FTicDw&usqp=CAU"}
+      new Pelicula('Spiderman 4', 2019, 'https://cnet1.cbsistatic.com/img/rfzZ-7G32v_qEt2uCD0b4KB2rho=/940x0/2019/03/26/13d0a566-7355-4381-be24-dee281227504/spider-man-far-from-home-promo-image-1.jpg'),
+      new Pelicula('Vengadores Endgame', 2019, 'https://as.com/tikitakas/imagenes/2019/04/26/portada/1556258369_131914_1556258703_noticia_normal.jpg'),
+      new Pelicula('Batman vs Superman', 2015, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujMN0ViTbR_tUzQBB1L1sA_vVW_K-FTicDw&usqp=CAU'),
+      new Pelicula('Batman vs Superman', 2015, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujMN0ViTbR_tUzQBB1L1sA_vVW_K-FTicDw&usqp=CAU'),
     ];
    }
 
