@@ -17,7 +17,8 @@ const appRoutes: Routes = [
   {path: 'blog', component: BlogComponent},
   {path: 'formulario', component: FormularioComponent},
   {path: 'peliculas', component: PeliculasComponent},
-  {path: 'pagina', component: PaginaComponent},
+  {path: 'pagina', component: PaginaComponent}, // ruta sin parámetro
+  {path: 'pagina/:nombre/:apellidos', component: PaginaComponent}, // ruta con parámetro
   {path: '**', component: ErrorComponent}
 ]
 
