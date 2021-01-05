@@ -2,3 +2,23 @@
 
 <h2>{{ titulo }}</h2>
 <button (click)="cambiarTitulo()" >pulsame</button>
+<hr/>
+
+<h2>Mostrar primera pelicula {{ peliculas[0].title }}</h2>
+<hr/>
+
+<h2>Numero de peliculas</h2>
+
+<div *ngIf="peliculas.length <= 3" >
+  Hay pocas películas
+</div>
+
+<div *ngIf="peliculas.length > 3" >
+
+  {{ peliculas.length }}
+
+</div>
+
+<hr/>
+
+
